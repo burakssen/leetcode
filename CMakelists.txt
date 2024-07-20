@@ -1,0 +1,22 @@
+cmake_minimum_required(VERSION 3.28)
+
+project(leetcode_c)
+
+set(CMAKE_C_STANDARD 11)
+
+add_subdirectory("vendor/Unity")
+
+# Twosums
+add_executable(twosums "1. Two Sum/test.c")
+target_include_directories(twosums PUBLIC "vendor/Unity/src")
+target_link_libraries(twosums PRIVATE unity)
+
+# Add Two Numbers
+add_executable(add_two_numbers "2. Add Two Numbers/test.c")
+target_include_directories(add_two_numbers PUBLIC "vendor/Unity/src")
+target_link_libraries(add_two_numbers PRIVATE unity)
+
+# Longest Substring Without Repeating Characters
+add_executable(longest_substring_without_repeating_characters "3. Longest Substring Without Repeating Characters/test.c")
+target_include_directories(longest_substring_without_repeating_characters PUBLIC "vendor/Unity/src")
+target_link_libraries(longest_substring_without_repeating_characters PRIVATE unity)
