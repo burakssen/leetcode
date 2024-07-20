@@ -1,0 +1,3 @@
+[submodule "vendoR/Catch2"]
+	path = vendoR/Catch2
+	url = https://github.com/catchorg/Catch2
