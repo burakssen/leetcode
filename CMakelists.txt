@@ -20,3 +20,9 @@ target_link_libraries(add_two_numbers PRIVATE unity)
 add_executable(longest_substring_without_repeating_characters "3. Longest Substring Without Repeating Characters/test.c")
 target_include_directories(longest_substring_without_repeating_characters PUBLIC "vendor/Unity/src")
 target_link_libraries(longest_substring_without_repeating_characters PRIVATE unity)
+
+
+enable_testing()
+add_test(NAME twosums COMMAND twosums)
+add_test(NAME add_two_numbers COMMAND add_two_numbers)
+add_test(NAME longest_substring_without_repeating_characters COMMAND longest_substring_without_repeating_characters)
