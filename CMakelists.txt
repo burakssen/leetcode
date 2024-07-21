@@ -7,6 +7,7 @@ add_subdirectory("vendor/Catch2")
 
 set(twosum_dir "1. Two Sum")
 set(addtwonumbers_dir "2. Add Two Numbers")
+set(longestsubstringwithoutrepeatingcharacters_dir "3. Longest Substring Without Repeating Characters")
 
 add_executable(twosum "${twosum_dir}/test.cpp" "${twosum_dir}/twosum.cpp")
 target_include_directories(twosum PRIVATE "vendor/Catch2/single_include")
@@ -16,8 +17,12 @@ add_executable(addtwonumbers "${addtwonumbers_dir}/test.cpp" "${addtwonumbers_di
 target_include_directories(addtwonumbers PRIVATE "vendor/Catch2/single_include")
 target_link_libraries(addtwonumbers Catch2::Catch2)
 
+add_executable(longestsubstringwithoutrepeatingcharacters "${longestsubstringwithoutrepeatingcharacters_dir}/test.cpp" "${longestsubstringwithoutrepeatingcharacters_dir}/longestsubstring.cpp")
+target_include_directories(longestsubstringwithoutrepeatingcharacters PRIVATE "vendor/Catch2/single_include")
+target_link_libraries(longestsubstringwithoutrepeatingcharacters Catch2::Catch2)
 
 # Run the tests
 enable_testing()
 add_test(NAME twosum COMMAND twosum)
 add_test(NAME addtwonumbers COMMAND addtwonumbers)
+add_test(NAME longestsubstringwithoutrepeatingcharacters COMMAND longestsubstringwithoutrepeatingcharacters)
