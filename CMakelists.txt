@@ -21,8 +21,13 @@ add_executable(longest_substring_without_repeating_characters "3. Longest Substr
 target_include_directories(longest_substring_without_repeating_characters PUBLIC "vendor/Unity/src")
 target_link_libraries(longest_substring_without_repeating_characters PRIVATE unity)
 
+# Median of Two Sorted Arrays
+add_executable(median_of_two_sorted_arrays "4. Median of Two Sorted Arrays/test.c")
+target_include_directories(median_of_two_sorted_arrays PUBLIC "vendor/Unity/src")
+target_link_libraries(median_of_two_sorted_arrays PRIVATE unity)
 
 enable_testing()
 add_test(NAME twosums COMMAND twosums)
 add_test(NAME add_two_numbers COMMAND add_two_numbers)
 add_test(NAME longest_substring_without_repeating_characters COMMAND longest_substring_without_repeating_characters)
+add_test(NAME median_of_two_sorted_arrays COMMAND median_of_two_sorted_arrays)
